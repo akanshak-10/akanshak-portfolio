@@ -1,3 +1,9 @@
+
+---
+
+# **Full HTML Portfolio**
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,909 +11,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akansha Karmarkar - ML/AI Engineer Portfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f7fa;
-        }
-
-        /* Navigation */
-        nav {
-            background: #2C3E50;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav h1 {
-            font-size: 1.5rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #3498DB;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero .tagline {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            font-weight: 300;
-        }
-
-        .cta-buttons {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #2C3E50;
-        }
-
-        .btn-primary:hover {
-            background: #3498DB;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #2C3E50;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Section */
-        section {
-            padding: 80px 20px;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #2C3E50;
-            text-align: center;
-        }
-
-        section .subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .profile-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            background: #3498DB;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            margin: 0 auto;
-        }
-
-        .about-text h3 {
-            color: #2C3E50;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-            color: #555;
-            font-size: 1.1rem;
-        }
-
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .highlight-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .highlight-item span {
-            font-size: 1.5rem;
-        }
-
-        /* Stats Section */
-        .stats {
-            background: white;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            max-width: 1000px;
-            margin: 3rem auto 0;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-item .number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #3498DB;
-        }
-
-        .stat-item .label {
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .project-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-card h3 {
-            color: #2C3E50;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .project-card p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .project-metrics {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin: 1rem 0;
-        }
-
-        .metric {
-            background: #ecf0f1;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #2C3E50;
-        }
-
-        .project-tech {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin: 1rem 0;
-        }
-
-        .tech-tag {
-            background: #3498DB;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .project-links a {
-            text-decoration: none;
-            color: #3498DB;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .project-links a:hover {
-            color: #2C3E50;
-        }
-
-        /* Skills Section */
-        .skills-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .skill-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .skill-category h3 {
-            color: #2C3E50;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill-item {
-            background: #ecf0f1;
-            padding: 0.7rem 1.2rem;
-            border-radius: 5px;
-            font-weight: 500;
-            color: #2C3E50;
-            transition: all 0.3s;
-        }
-
-        .skill-item:hover {
-            background: #3498DB;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Experience Section */
-        .experience-timeline {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .experience-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 4px solid #3498DB;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .experience-title h3 {
-            color: #2C3E50;
-            font-size: 1.5rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .company {
-            color: #3498DB;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .date {
-            color: #666;
-            font-weight: 500;
-        }
-
-        .experience-item ul {
-            margin-left: 1.5rem;
-            color: #555;
-        }
-
-        .experience-item li {
-            margin-bottom: 0.8rem;
-        }
-
-        /* Education Section */
-        .education-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .education-card h3 {
-            color: #2C3E50;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-card .degree {
-            color: #3498DB;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .education-card .details {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .gpa {
-            margin-top: 1rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #2C3E50;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-intro {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 3rem;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-item .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item h3 {
-            color: #2C3E50;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-item a {
-            color: #3498DB;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            font-size: 2rem;
-            color: #2C3E50;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #3498DB;
-        }
-
-        /* Footer */
-        footer {
-            background: #2C3E50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Responsive */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f7fa; }
+        nav { background: #2C3E50; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        nav h1 { font-size: 1.5rem; }
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a { color: white; text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: #3498DB; }
+        .hero { background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%); color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .hero .tagline { font-size: 1.5rem; margin-top: 1rem; font-weight: 300; }
+        .cta-buttons { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; }
+        .btn-primary { background: white; color: #2C3E50; }
+        .btn-primary:hover { background: #3498DB; color: white; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn-secondary:hover { background: white; color: #2C3E50; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 20px; }
+        section h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #2C3E50; text-align: center; }
+        section .subtitle { text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 3rem; }
+        .about-content { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; max-width: 1000px; margin: 0 auto; }
+        .profile-img { width: 250px; height: 250px; border-radius: 50%; background: #3498DB; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white; margin: 0 auto; }
+        .about-text h3 { color: #2C3E50; margin-bottom: 1rem; font-size: 1.8rem; }
+        .about-text p { margin-bottom: 1rem; color: #555; font-size: 1.1rem; }
+        .highlights { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; }
+        .highlight-item { display: flex; align-items: center; gap: 0.5rem; }
+        .highlight-item span { font-size: 1.5rem; }
+        .stats { background: white; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 3rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 1000px; margin: 3rem auto 0; }
+        .stat-item { text-align: center; }
+        .stat-item .number { font-size: 2.5rem; font-weight: bold; color: #3498DB; }
+        .stat-item .label { color: #666; font-size: 0.9rem; margin-top: 0.5rem; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .project-card { background: white; border-radius: 10px; padding: 2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .project-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .project-card h3 { color: #2C3E50; margin-bottom: 1rem; font-size: 1.5rem; }
+        .project-card p { color: #666; margin-bottom: 1rem; }
+        .project-tech { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+        .tech-tag { background: #3498DB; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; }
+        .project-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+        .project-links a { text-decoration: none; color: #3498DB; font-weight: 600; transition: color 0.3s; }
+        .project-links a:hover { color: #2C3E50; }
+        .skills-container { max-width: 1000px; margin: 0 auto; }
+        .skill-category { background: white; padding: 2rem; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .skill-category h3 { color: #2C3E50; margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .skills-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+        .skill-item { background: #ecf0f1; padding: 0.7rem 1.2rem; border-radius: 5px; font-weight: 500; color: #2C3E50; transition: all 0.3s; }
+        .skill-item:hover { background: #3498DB; color: white; transform: translateY(-2px); }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .highlights {
-                grid-template-columns: 1fr;
-            }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .about-content { grid-template-columns: 1fr; text-align: center; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .projects-grid { grid-template-columns: 1fr; }
+            nav ul { flex-direction: column; gap: 1rem; }
+            .highlights { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <h1>Akansha Karmarkar</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+<!-- Navigation -->
+<nav>
+    <div class="container">
         <h1>Akansha Karmarkar</h1>
-        <p>Machine Learning Engineer | AI Developer | Data Scientist</p>
-        <p class="tagline">Transforming Data Into Intelligent Solutions That Drive Business Impact</p>
-        <div class="cta-buttons">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="resume.pdf" class="btn btn-secondary" download>Download Resume</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
-        </div>
-    </section>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p class="subtitle">Results-driven ML/AI professional building production systems that solve real-world problems</p>
-            
-            <div class="about-content">
-                <div class="profile-img">AK</div>
-                <div class="about-text">
-                    <h3>Building Intelligent Systems for 7+ Years</h3>
-                    <p>I'm passionate about leveraging machine learning and artificial intelligence to solve complex challenges across diverse industries. With a Master's degree in Advanced Data Analytics and extensive experience at leading companies, I bridge the gap between cutting-edge ML technology and practical business applications.</p>
-                    
-                    <p>My expertise spans the complete ML lifecycle—from problem formulation and data engineering to model deployment and monitoring. I specialize in processing large-scale datasets (100M+ records), achieving high prediction accuracy (up to 97%), and delivering measurable business impact.</p>
-                    
-                    <div class="highlights">
-                        <div class="highlight-item">
-                            <span>🎯</span>
-                            <div>
-                                <strong>97% Accuracy</strong><br>
-                                Production ML models
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <span>📊</span>
-                            <div>
-                                <strong>100M+ Records</strong><br>
-                                Large-scale processing
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <span>📈</span>
-                            <div>
-                                <strong>15% Improvement</strong><br>
-                                Operational efficiency
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <span>🌍</span>
-                            <div>
-                                <strong>20+ Countries</strong><br>
-                                Global deployments
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Akansha Karmarkar</h1>
+    <p>Machine Learning Engineer | Data Scientist | AI Developer</p>
+    <p class="tagline">Transforming Data into Actionable Insights Across Aviation, Healthcare, Education & Finance</p>
+    <div class="cta-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    </div>
+</section>
 
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="number">7+</div>
-                    <div class="label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="number">100M+</div>
-                    <div class="label">Records Processed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="number">97%</div>
-                    <div class="label">Model Accuracy</div>
-                </div>
-                <div class="stat-item">
-                    <div class="number">3.8</div>
-                    <div class="label">GPA (MS)</div>
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p class="subtitle">Experienced Data Scientist and ML Engineer building production-grade AI solutions</p>
+        <div class="about-content">
+            <div class="profile-img">AK</div>
+            <div class="about-text">
+                <h3>7+ Years Transforming Data into Business Impact</h3>
+                <p>I specialize in building end-to-end ML pipelines, predictive modeling, and data-driven dashboards. Experienced in processing large-scale datasets (100M+ records), deploying production-ready ML models (up to 97% accuracy), and delivering actionable business insights across multiple domains.</p>
+                <div class="highlights">
+                    <div class="highlight-item"><span>🎯</span><div><strong>97% Accuracy</strong><br>Production ML models</div></div>
+                    <div class="highlight-item"><span>📊</span><div><strong>100M+ Records</strong><br>Large-scale data processing</div></div>
+                    <div class="highlight-item"><span>📈</span><div><strong>15% Improvement</strong><br>Operational efficiency</div></div>
+                    <div class="highlight-item"><span>🌍</span><div><strong>20+ Countries</strong><br>Global deployments</div></div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="stats">
+            <div class="stat-item"><div class="number">7+</div><div class="label">Years Experience</div></div>
+            <div class="stat-item"><div class="number">100M+</div><div class="label">Records Processed</div></div>
+            <div class="stat-item"><div class="number">97%</div><div class="label">Model Accuracy</div></div>
+            <div class="stat-item"><div class="number">3.8</div><div class="label">GPA (MS)</div></div>
+        </div>
+    </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <p class="subtitle">Production-grade ML solutions solving real-world business problems</p>
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2>Featured Projects</h2>
+        <p class="subtitle">Production-grade ML solutions solving real-world business problems</p>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card"><div class="project-icon">✈️</div>
+                <h3>Baggage Arrival Prediction (American Airlines)</h3>
+                <p>Built ML models processing 50M+ records, predicting baggage arrival times with RMSE &lt; 20.5 min.</p>
+                <div class="project-tech"><span class="tech-tag">XGBoost</span><span class="tech-tag">LightGBM</span><span class="tech-tag">Apache Parquet</span><span class="tech-tag">PySpark</span></div>
+                <div class="project-links"><a href="https://github.com/yourusername/baggage-arrival-prediction">View on GitHub →</a></div>
+            </div>
 
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-icon">✈️</div>
-                    <h3>Airport Congestion Predictor</h3>
-                    <p>Intelligent ML system predicting airport terminal congestion by analyzing flight schedules, weather, baggage times, and TSA throughput with 15-minute interval predictions.</p>
-                    
-                    <div class="project-metrics">
-                        <span class="metric">89% Accuracy</span>
-                        <span class="metric">50M+ Records</span>
-                        <span class="metric">RMSE: 12.3 min</span>
-                    </div>
-                    
-                    <div class="project-tech">
-                        <span class="tech-tag">XGBoost</span>
-                        <span class="tech-tag">LightGBM</span>
-                        <span class="tech-tag">LSTM</span>
-                        <span class="tech-tag">Parquet</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/airport-congestion-predictor">View on GitHub →</a>
-                    </div>
-                </div>
+            <!-- Project 2 -->
+            <div class="project-card"><div class="project-icon">📚</div>
+                <h3>Student Success Analytics (People Tech)</h3>
+                <p>Predictive models for educational analytics, early intervention, and retention analysis with 84% accuracy.</p>
+                <div class="project-tech"><span class="tech-tag">Random Forest</span><span class="tech-tag">SQL</span><span class="tech-tag">Python</span><span class="tech-tag">Tableau</span></div>
+                <div class="project-links"><a href="https://github.com/yourusername/student-success-analytics">View on GitHub →</a></div>
+            </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-icon">📚</div>
-                    <h3>Educational Equity Analyzer</h3>
-                    <p>ML-powered early warning system identifying at-risk students 4-6 weeks before grade decline through behavioral pattern analysis with full FERPA compliance.</p>
-                    
-                    <div class="project-metrics">
-                        <span class="metric">84% Accuracy</span>
-                        <span class="metric">4-6 Weeks Early</span>
-                        <span class="metric">67% Retention</span>
-                    </div>
-                    
-                    <div class="project-tech">
-                        <span class="tech-tag">Random Forest</span>
-                        <span class="tech-tag">Isolation Forest</span>
-                        <span class="tech-tag">Tableau</span>
-                        <span class="tech-tag">Privacy</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/educational-equity-analyzer">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-icon">🔗</div>
-                    <h3>Supply Chain Cascade Predictor</h3>
-                    <p>Graph neural network system modeling supply chain networks to predict cascading disruption effects across 2-3 hops with timeline and severity estimates.</p>
-                    
-                    <div class="project-metrics">
-                        <span class="metric">81% Accuracy</span>
-                        <span class="metric">10K+ Nodes</span>
-                        <span class="metric">3.2 Week Warning</span>
-                    </div>
-                    
-                    <div class="project-tech">
-                        <span class="tech-tag">GNN</span>
-                        <span class="tech-tag">NetworkX</span>
-                        <span class="tech-tag">Neo4j</span>
-                        <span class="tech-tag">Monte Carlo</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/supply-chain-cascade-predictor">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-icon">🏥</div>
-                    <h3>Healthcare No-Show Decoder</h3>
-                    <p>Interpretable ML system predicting appointment no-shows while identifying underlying barriers (transportation, childcare, work) for targeted interventions.</p>
-                    
-                    <div class="project-metrics">
-                        <span class="metric">86% Accuracy</span>
-                        <span class="metric">5 Barriers</span>
-                        <span class="metric">73% Effective</span>
-                    </div>
-                    
-                    <div class="project-tech">
-                        <span class="tech-tag">XGBoost</span>
-                        <span class="tech-tag">SHAP</span>
-                        <span class="tech-tag">Causal Inference</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/healthcare-noshow-decoder">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <div class="project-icon">💰</div>
-                    <h3>Pricing Fairness Auditor</h3>
-                    <p>ML system monitoring e-commerce dynamic pricing for discriminatory patterns across demographics with fair pricing constraint recommendations.</p>
-                    
-                    <div class="project-metrics">
-                        <span class="metric">12% Flagged</span>
-                        <span class="metric">$2.3M Found</span>
-                        <span class="metric">94% Revenue</span>
-                    </div>
-                    
-                    <div class="project-tech">
-                        <span class="tech-tag">Regression</span>
-                        <span class="tech-tag">Fairness ML</span>
-                        <span class="tech-tag">DoWhy</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/pricing-fairness-auditor">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <div class="project-icon">🍽️</div>
-                    <h3>Restaurant Menu Optimizer</h3>
-                    <p>ML-powered order pattern analysis optimizing menu design through market basket analysis, seasonal forecasting, and profit margin optimization.</p>
-                    
-                    <div class="project-metrics">
-                        <span class="metric">23% Profit</span>
-                        <span class="metric">31% Waste ↓</span>
-                        <span class="metric">18% Efficiency</span>
-                    </div>
-                    
-                    <div class="project-tech">
-                        <span class="tech-tag">Apriori</span>
-                        <span class="tech-tag">Prophet</span>
-                        <span class="tech-tag">LP Optimization</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/restaurant-menu-optimizer">View on GitHub →</a>
-                    </div>
-                </div>
+            <!-- Project 3 -->
+            <div class="project-card"><div class="project-icon">🏥</div>
+                <h3>Healthcare Operational Analytics (Accenture)</h3>
+                <p>Analyzed 100M+ healthcare records, improving operational efficiency by 15% across 20+ countries.</p>
+                <div class="project-tech"><span class="tech-tag">Oracle PL/SQL</span><span class="tech-tag">Python</span><span class="tech-tag">Tableau</span></div>
+                <div class="project-links"><a href="https://github.com/yourusername/healthcare-analytics">View on GitHub →</a></div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <p class="subtitle">Comprehensive expertise across the ML/AI technology stack</p>
-
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming & Data</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Oracle PL/SQL</span>
-                        <span class="skill-item">R</span>
-                        <span class="skill-item">Pandas</span>
-                        <span class="skill-item">NumPy</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Machine Learning & AI</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">XGBoost</span>
-                        <span class="skill-item">LightGBM</span>
-                        <span class="skill-item">Random Forest</span>
-                        <span class="skill-item">Gradient Boosting</span>
-                        <span class="skill-item">Logistic Regression</span>
-                        <span class="skill-item">Decision Trees</span>
-                        <span class="skill-item">K-Means Clustering</span>
-                        <span class="skill-item">Time Series</span>
-                        <span class="skill-item">LSTM</span>
-                        <span class="skill-item">Ensemble Methods</span>
-                        <span class="skill-item">Hyperparameter Tuning</span>
-                        <span class="skill-item">Cross-Validation</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Statistical & Analytical</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">EDA</span>
-                        <span class="skill-item">Hypothesis Testing</span>
-                        <span class="skill-item">A/B Testing</span>
-                        <span class="skill-item">Correlation Analysis</span>
-                        <span class="skill-item">Outlier Detection</span>
-                        <span class="skill-item">Regression Analysis</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Data Engineering & Pipelines</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">ETL Pipelines</span>
-                        <span class="skill-item">Apache Parquet</span>
-                        <span class="skill-item">Query Optimization</span>
-                        <span class="skill-item">100M+ Records</span>
-                        <span class="skill-item">Feature Engineering</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Cloud & Big Data</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Google Cloud Platform</span>
-                        <span class="skill-item">Apache Spark</span>
-                        <span class="skill-item">Hadoop</span>
-                        <span class="skill-item">Snowflake</span>
-                        <span class="skill-item">AWS (EC2, S3, Lambda)</span>
-                        <span class="skill-item">FireDucks</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Visualization & BI</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Tableau</span>
-                        <span class="skill-item">Power BI</span>
-                        <span class="skill-item">Matplotlib</span>
-                        <span class="skill-item">Seaborn</span>
-                        <span class="skill-item">Plotly</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Scikit-learn</span>
-                        <span class="skill-item">TensorFlow</span>
-                        <span class="skill-item">PyTorch</span>
-                        <span class="skill-item">Statsmodels</span>
-                        <span class="skill-item">SciPy</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Development & MLOps</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Jupyter</span>
-                        <span class="skill-item">VS Code</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">GitHub</span>
-                        <span class="skill-item">Model Versioning</span>
-                        <span class="skill-item">Docker</span>
-                    </div>
-                </div>
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <h2>Technical Skills</h2>
+        <p class="subtitle">Comprehensive expertise across Data Science, ML/AI, and Cloud technologies</p>
+        <div class="skills-container">
+            <div class="skill-category"><h3>Programming & Data</h3>
+                <div class="skills-list"><span class="skill-item">Python</span><span class="skill-item">SQL</span><span class="skill-item">R</span><span class="skill-item">Oracle PL/SQL</span><span class="skill-item">Pandas</span><span class="skill-item">NumPy</span></div>
             </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            <p class="subtitle">7+ years
+            <div class="skill-category"><h3>Machine Learning & AI</h3>
+                <div class="skills-list"><span class="skill-item">Random Forest</span><span class="skill-item">XGBoost</span><span class="skill-item">LightGBM</span><span class="skill-item">Gradient Boosting</span><span class="skill-item">Time
